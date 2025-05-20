@@ -1,0 +1,9 @@
+
+<%= @task.title %>
+
+<p><strong>Details:</strong>  <%=@task.details%></p>
+<p><strong>Statut:</strong>  <%= @task.completed ? "terminé" : "Non terminé" %></p>
+
+<%= link_to "Modifier", edit_path(@task.id)%>
+
+<%= link_to "Supprimer", task_path(@task.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
